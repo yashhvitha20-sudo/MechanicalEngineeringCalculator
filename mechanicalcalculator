@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    float force, area, original_length, change_length;
+    float stress, strain, youngs_modulus;
+
+    printf("=== Stress, Strain & Young's Modulus Calculator ===\n");
+
+    printf("Enter Force (N): ");
+    scanf("%f", &force);
+
+    printf("Enter Cross-sectional Area (m^2): ");
+    scanf("%f", &area);
+
+    printf("Enter Original Length (m): ");
+    scanf("%f", &original_length);
+
+    printf("Enter Change in Length (m): ");
+    scanf("%f", &change_length);
+
+    stress = force / area;
+    strain = change_length / original_length;
+    youngs_modulus = stress / strain;
+
+    printf("\nResults:\n");
+    printf("Stress = %.2f Pa\n", stress);
+    printf("Strain = %.6f\n", strain);
+    printf("Young's Modulus = %.2f Pa\n", youngs_modulus);
+
+    return 0;
+}
